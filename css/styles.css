@@ -22,13 +22,16 @@ body, html {
 
 /* dividing the headings of the page into four quadrants */
 main {
-  border: 2px solid #000; /* Border around the main content */
+  border: 1px solid #000; /* Border around the main content */
+  border-right: 0;
   flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
+  margin: 0 0 0 30px;
+  position: relative;
 }
 
 article:first-of-type,
@@ -44,6 +47,7 @@ article:nth-of-type(2) {
 aside:nth-of-type(1) {
   grid-column: 1;
   grid-row: 1;
+  margin-top: 100px;
 }
 
 aside:nth-of-type(2) {
@@ -66,18 +70,19 @@ h1, h2, h3, p, a {
  /* lets style the h1 */
 
  h1 {
-  text-transform: lowercase;
-  padding: 10px;
+  text-transform: lowercase; /* Ensure all text is lowercase */
+  padding: 0px;
   margin: 0;
-  position: static;
+  position: absolute; /* Position h1 absolutely within main */
   font-size: 4em;
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
 }
 
 h1 em {
-  color: red;
+  color: red; /* Change the color of 'home' within h1 */
   font-style: normal;
 }
-
 
 
 a {
@@ -90,7 +95,29 @@ a:hover {
   text-decoration: underline;
 }
 
-header, footer {
-  text-align: center;
-  padding: 10px 0;
+/* the header and the footer */
+
+header {
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 30px 30px 0;
+}
+
+footer {
+  padding: 10px 0 30px 30px
+}
+footer p small {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+footer p small em {
+  font-weight: bold; /* Make "18" bold */
+  margin-right: 1rem; /* Add space to the right of "18" */
+  font-style: normal;
+}
+
+footer p small abbr {
+  font-weight: bold; /* Make "CAA" bold */
 }
