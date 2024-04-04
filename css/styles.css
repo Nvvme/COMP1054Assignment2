@@ -6,13 +6,14 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* to convert the webpage to look like a magazine page */
 #container {
-  width: 50%;
-  min-height: 80vh;
+  width: 65%;
+  min-height: 120vh;
   margin: 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -45,9 +46,15 @@ article:nth-of-type(2) {
 }
 
 aside:nth-of-type(1) {
+  width: 70%;
   grid-column: 1;
   grid-row: 1;
-  margin-top: 100px;
+  font-size: 1.3em; /* Makes the text bigger */
+  padding: 0 35px 35px 35px; /* Adds padding around the text */
+  border-right: 2px solid #000; /* Adds a line to the right */
+  display: inline-block; 
+  margin: 80px 0; 
+  line-height: 1.5;
 }
 
 aside:nth-of-type(2) {
@@ -69,18 +76,23 @@ h1, h2, h3, p, a {
 
  /* lets style the h1 */
 
- h1 {
-  text-transform: lowercase; /* Ensure all text is lowercase */
-  padding: 0px;
-  margin: 0;
-  position: absolute; /* Position h1 absolutely within main */
-  font-size: 4em;
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
-}
+  h1 {
+    font-family: 'Arial Black', Arial, sans-serif;
+    text-transform: lowercase; /* Ensure all text is lowercase */
+    padding: 0px;
+    margin: 0;
+    position: absolute;
+    font-size: 5em;
+    text-align: left;
+    line-height: 0.65;
+    kerning: 0cm;
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    text-indent: -5px;
+  }
 
 h1 em {
-  color: red; /* Change the color of 'home' within h1 */
+  color: #cc202c; /* Change the color of 'home' within h1 */
   font-style: normal;
 }
 
@@ -99,8 +111,8 @@ a:hover {
 
 header {
   text-align: left;
-  font-size: 1.2em;
-  font-weight: bold;
+  text-transform:uppercase;
+  font-size: 1em;
   padding: 30px 30px 0;
 }
 
