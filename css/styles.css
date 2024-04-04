@@ -1,3 +1,5 @@
+/*In this assignment, I chose the "home-base" article . I tried my best to make as little changes to the html as possible. I normalized the CSS, and adding a viewport meta tag for mobile responsiveness, while minimally altering the HTML. My main task was to use external CSS to closely replicate the magazine's layout for the web, acknowledging the differences between print and web design. I ensured the HTML and CSS were valid through W3C validation services and committed my code changes with descriptive comments regularly. The project aimed to blend the magazine's aesthetic with web functionality, adhering to web standards and accessibility. I had a lot of fun doing my assignment and I tried my best ||ヽ(*￣▽￣*)ノ! */
+
 /* General styling */
 body, html {
   margin: 0;
@@ -47,7 +49,7 @@ article:first-of-type h2 {
 
 article:nth-of-type(2) {
   grid-column: 2;
-  padding-top: 110px;
+  padding-top: 130px;
   margin-bottom: 0;
   grid-row: 2;
 }
@@ -56,10 +58,11 @@ article:nth-of-type(2) h2 {
  font-size: 4em;
  color: black;
  margin-bottom: 0;
- font-family: Calibri;
+ font-family: "Candara", Helvetica, sans-serif;
  text-transform: lowercase;
  font-weight: lighter;
 }
+
 
 article:nth-of-type(2) h2::first-letter {
   text-transform: capitalize;
@@ -83,13 +86,17 @@ aside:nth-of-type(2) {
   grid-column: 1;
   grid-row: 2;
   margin-top: 0;
-  padding-top: 0;
-  
+  padding-right: 24px;
+  padding-left: 10px;
+  padding-top: 100px;
+  background-color: #eae4e6;
 }
 
 aside:nth-of-type(2) h2 {
   padding-left: 0px;
-  left: 0;
+  height: 50px;
+  position: absolute;
+  bottom: 600px;
   margin-left: 0;
   padding-bottom: 0;
   margin: 0px;
@@ -97,14 +104,17 @@ aside:nth-of-type(2) h2 {
   font-size: 1.5em;
 }
 
+
 aside:nth-of-type(2) h2:before {
   content: "₊";
-  color: rgb(116, 116, 116);
+  color: rgb(77, 77, 77);
   font-size: 7em;
   font-weight:1;
   text-align: left;
   padding: 0;
+  font-weight: bold;
   margin: 0;
+  position: relative;
 }
 
 
@@ -122,7 +132,7 @@ h2 {
  /* lets style the h1 */
 
   h1 {
-    text-transform: lowercase; /* Ensure all text is lowercase */
+    text-transform: lowercase; 
     padding: 0px;
     margin: 0;
     position: absolute;
@@ -143,6 +153,7 @@ h1 em {
 
 h3{
   font-size: small;
+  font-weight: 800;
 }
 
 a {
@@ -175,13 +186,13 @@ footer p small {
 }
 
 footer p small em {
-  font-weight: bold; /* Make "18" bold */
+  font-weight: 900; /* Make "18" bold */
   margin-right: 1rem; /* Add space to the right of "18" */
   font-style: normal;
 }
 
 footer p small abbr {
-  font-weight: bold; /* Make "CAA" bold */
+  font-weight:900; /* Make "CAA" bold */
   text-decoration: none;
 }
 
@@ -204,4 +215,29 @@ footer p small abbr {
   margin-top: 40px;
   padding-left: 0px;
   position: absolute;
+}
+
+/* changing the color of the mark */
+
+mark {
+  background-color: #eae4e6;
+}
+
+/* changing the list */
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+li {
+  position: relative; 
+  padding-left: 20px; 
+}
+
+li::before {
+  content: "+"; 
+  position: absolute; 
+  left: 0;
+  top: 0; 
 }
